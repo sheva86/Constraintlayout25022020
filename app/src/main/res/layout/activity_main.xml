@@ -9,7 +9,8 @@
     <TextView
         android:id="@+id/textview1"
         app:layout_constraintHorizontal_chainStyle="packed"
-        android:layout_width="wrap_content"
+        app:layout_constraintHorizontal_weight="3"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="#f20"
         android:text="view 1"
@@ -21,9 +22,10 @@
 
     <TextView
         android:id="@+id/textview2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="#009688"
+        app:layout_constraintHorizontal_weight="4"
         android:text="view 2"
         android:textColor="#ffff"
         android:textSize="30sp"
@@ -33,8 +35,9 @@
         app:layout_constraintTop_toTopOf="parent" />
     <TextView
         android:id="@+id/textview3"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="3"
         android:background="#FFEB3B"
         android:text="view 3"
         android:textColor="#ffff"
