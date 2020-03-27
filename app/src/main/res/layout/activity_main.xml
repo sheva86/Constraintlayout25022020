@@ -5,47 +5,106 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/textview1"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintHorizontal_weight="3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#f20"
-        android:text="view 1"
-        android:textColor="#ffff"
-        android:textSize="30sp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constriaingroup1"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/textview2"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textview2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#009688"
-        app:layout_constraintHorizontal_weight="4"
-        android:text="view 2"
-        android:textColor="#ffff"
-        android:textSize="30sp"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintLeft_toRightOf="@id/textview1"
-        app:layout_constraintRight_toLeftOf="@id/textview3"
-        app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/textview3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintHorizontal_weight="3"
-        android:background="#FFEB3B"
-        android:text="view 3"
-        android:textColor="#ffff"
-        android:textSize="30sp"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintLeft_toRightOf="@id/textview2"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@id/constriaingroup2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:text="A"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:background="#f20"
+            android:id="@+id/textA"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textB"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+        <TextView
+            android:text="B"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:background="#70C60C"
+            android:id="@+id/textB"
+            app:layout_constraintTop_toBottomOf="@id/textA"
+            app:layout_constraintBottom_toTopOf="@id/textC"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+        <TextView
+            android:text="C"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:background="#C6BF34"
+            android:id="@+id/textC"
+            app:layout_constraintTop_toBottomOf="@id/textB"
+            app:layout_constraintBottom_toTopOf="@id/textD"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+        <TextView
+            android:text="D"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:background="#3454C6"
+            android:id="@+id/textD"
+            app:layout_constraintTop_toBottomOf="@id/textC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constriaingroup2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constriaingroup1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:text="A"
+            android:id="@+id/textA1"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/textB1"
+            android:textSize="30sp"
+            android:background="#F2FA16"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:text="B"
+            android:id="@+id/textB1"
+            android:gravity="center"
+            app:layout_constraintLeft_toRightOf="@id/textA1"
+            app:layout_constraintRight_toLeftOf="@id/textC1"
+            android:textSize="30sp"
+            android:background="#82836E"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:text="C"
+            android:id="@+id/textC1"
+            android:gravity="center"
+            app:layout_constraintLeft_toRightOf="@id/textB1"
+            app:layout_constraintRight_toLeftOf="@id/textD1"
+            android:textSize="30sp"
+            android:background="#9556DA"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:text="D"
+            android:id="@+id/textD1"
+            android:gravity="center"
+            app:layout_constraintLeft_toRightOf="@id/textC1"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textSize="30sp"
+            android:background="#8A3852"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
